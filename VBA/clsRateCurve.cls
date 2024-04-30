@@ -189,7 +189,9 @@ End Property
 Private Function getDFBoot(dtInterpol As Date) As Double
 ' Function calculates a discount factor based on the original curve grid
 ' function is used during bootstrapping
+'
 ' Paramters: dtInterpol: date for which discount factor is needed
+'
 ' Uses:
 ' - members: dblgridTenors, dblgridShiftedZeros, RefDate
 ' - public method: LIP
@@ -205,7 +207,9 @@ End Function
 Private Function getZRBoot(yearfrac As Double) As Double
 ' Function calculates a zero rate by linear interpolation from the original curve grid
 ' function is used during bootstrapping
+'
 ' Paramters: yearfrac
+'
 ' Uses:
 ' - members: dblgridTenors, dblgridShiftedZeros
 ' - public method: LIP
@@ -216,9 +220,12 @@ End Function
 Private Function calcSwapRateBoot(mat As Double) As Double
 ' Function calculates a fair swap rate on the current curve and based on the original grid,
 ' function is used during bootstrapping
+'
 ' parameters: mat as swap maturity in years
+'
 ' Uses:
 ' members RefDAte, intFrequency
+'
 ' methods: getDF
 Dim i As Integer, df As Double, A As Double
     Dim yf As Double
@@ -235,31 +242,25 @@ End Function
 Private Function calcFwdRateBoot(yearfrac1 As Double, yearfrac2 As Double) As Double
 ' Function calculates a forward rate based on the oroginal curve grid
 ' function is needed in the course of bootstrapping
+'
 ' Paramters:
-' - yearfrac1, yearfrac2
+'   yearfrac1
+'   yearfrac2
     calcFwdRateBoot = Exp(-getZRBoot(yearfrac1) * yearfrac1) / Exp(-getZRBoot(yearfrac2) * yearfrac2) - 1
 End Function
 
 
 '************************* Public Function Discount Factor **************
 
-' Function: getDF
-'
-' Function calculates a discount factor based on the final curve grid
-'
-' Parameters:
-'   dtInterpol - date for which discount factor is needed
-'
-' Uses::
-'   members - dblgridTenors, dblgridShiftedZeros, RefDate
-'   public method - LIP
-'
 Public Function getDF(dtInterpol As Date) As Double
 ' Function calculates a discount factor based on the final curve grid
-' Paramters: dtInterpol: date for which discount factor is needed
+'
+' Paramters: 
+'   dtInterpol: date for which discount factor is needed
+'
 ' Uses:
-' - members: dblgridTenors, dblgridShiftedZeros, RefDate
-' - public method: LIP
+'   members: dblgridTenors, dblgridShiftedZeros, RefDate
+'   public method: LIP
 
     Dim rate As Double, date0 As Long, tenor As Double
 
@@ -272,10 +273,12 @@ End Function
 '************************* Public Function Discount Factor **************
 Public Function getDFByYF(yf As Double) As Double
 ' Function calculates a discount factor based on the final curve grid as function of year fraction
+'
 ' Paramters: yf: year fraction for which discount factor is needed
-' Uses:
-' - members: dblgridTenors, dblgridShiftedZeros, RefDate
-' - public method: LIP
+'
+' Uses::
+'   members: dblgridTenors, dblgridShiftedZeros, RefDate
+'   public method: LIP
 
     Dim rate As Double
     rate = LIP(dblgridTenors, dblgridShiftedZeros, yf)
@@ -316,8 +319,11 @@ End Function
 '************************* Fwd Rate Calculation *******************************************************************************
 Public Function calcFwdRate(yearfrac1 As Double, yearfrac2 As Double) As Double
 ' Function calculates a forward rate based on the final curve grid
+'
 ' Paramters:
-' - yearfrac1, yearfrac2
+'   yearfrac1
+'   yearfrac2
+'
     If yearfrac2 - yearfrac1 = 0# Then
         calcFwdRate = 0#
     Else

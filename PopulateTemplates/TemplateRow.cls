@@ -1,7 +1,3 @@
-' This is the class docstring
-'
-'
-
 VERSION 1.0 CLASS
 BEGIN
   MultiUse = -1  'True
@@ -13,28 +9,20 @@ Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
 Option Explicit
 
+' This is the class docstring
+'
+'
 ' cls TemplateRow class MODULE
-'Generic Row object for filling Given templates 2024.04.15 LSI Stress testing
-
-' Row object with these properties
-' - template identifier
-' - row number (Znr) as defined in the template worksheet
-' - row name
-' - array of excluded columns
-' - data dict of columns values
+' Generic Row object for filling Given templates 2024.04.15 LSI Stress testing
+'
+' Row object with these properties:
+'   template identifier
+'   row number (Znr) as defined in the template worksheet
+'   row name
+'   array of excluded columns
+'   data dict of columns values
 '                - key: col#
 '                - value: column value
-
-
-
-' Class: TemplateRow
-'
-' Designed to store a dictionary whose (key, value) pairs are the (column numbers, and values to be written out)
-'
-' See Also:
-'   <TemplateObj>
-
-
 
 
 

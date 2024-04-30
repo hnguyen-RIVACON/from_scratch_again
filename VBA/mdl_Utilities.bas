@@ -7,8 +7,10 @@ Private cfNames() As String
 '                   Lineare Interpolation
 Public Function LIP(xVector() As Double, yVector() As Double, xValue As Double) As Double
 ' Function linearly interpolates from two double vectors
+'
 ' Parameters:
-' - xVector, yVector and xValue
+'   xVector, yVector and xValue
+'
 ' Returns: interpolated value
 
 Dim Dimension As Long, m As Double, n As Double, i As Integer ', xValue As Long
@@ -109,12 +111,22 @@ Dim i As Long, k As Long, flag As Long
 End Function
 
 '************************* Date Generator *****************************************
-' Function returns for a given fixingdate, maturity date, frequency, daycountconvention, business day convention and settlement offset a date matrix of relevant calculation and cash flow dates
-' Inputs: maturity, currentdate, frequency, offset, business day convention, day count convention
-' paymentDay: day in month on which payments are made, or -1 for maturity
-' ouput: Array(1. scheduled dates, 2. fixing dates, 3. payment dates)
 Public Function dtGenerator(dtLastFixing As Date, dtMat As Date, intFreq As Integer, intDCC As Integer, strBDC As String, Optional intOffSet As Integer = 0, Optional paymentDay As Integer = -1) As Date()
-    Dim i As Integer, i0 As Integer, dtHypDate As Date, dtSch() As Date, dtFix() As Date, dtPay() As Date, dtMatrix() As Date, intNrDates As Integer
+' Function returns for a given fixingdate, maturity date, frequency, daycountconvention, business day convention and settlement offset a date matrix of relevant calculation and cash flow dates
+'
+' Arguments: 
+'   maturity:
+'   currentdate:
+'   frequency:
+'   offset:
+'   business day convention:
+'   day count convention:
+'   paymentDay: day in month on which payments are made, or -1 for maturity
+'
+' ouput: 
+'   Array(1. scheduled dates, 2. fixing dates, 3. payment dates)
+
+   Dim i As Integer, i0 As Integer, dtHypDate As Date, dtSch() As Date, dtFix() As Date, dtPay() As Date, dtMatrix() As Date, intNrDates As Integer
     Dim refDate As Date
     Dim stubAtEnd As Boolean
     stubAtEnd = False
