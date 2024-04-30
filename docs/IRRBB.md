@@ -4,7 +4,7 @@
 ::: VBA/clsLoan.cls
     handler: vba
 
-::: VBA/mdl_CurveUtilities.cls
+::: VBA/mdl_CurveUtilities.bas
     handler: vba
 
 ::: VBA/mdl_Utilities.bas
