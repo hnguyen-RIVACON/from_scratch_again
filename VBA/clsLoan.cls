@@ -220,9 +220,9 @@ Public Sub calcCF(curveDic As Dictionary, discCurveName As String, scenName As S
 '   scenName: name of the applicable rate curve scenario
 '
 ' See Also:
-'   [mdl_CurveUtilities.getCurveName][VBA/mdl_CurveUtilities.getCurveName], 
+'   ['mdl_CurveUtilities.getCurveName'][VBA/mdl_CurveUtilities.getCurveName], 
 '   [mdl_Utilities.dtGenerator][VBA/], 
-'   [clsRateCurve.getDF][VBA/], 
+'   ['clsRateCurve.getDF'][VBA/], 
 '   [clsRateCurve.calcFwdRate][VBA/]
 '
 ' output / transformed variables::
