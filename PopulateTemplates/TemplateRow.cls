@@ -33,13 +33,15 @@ Option Explicit
 
 
 
+
+Private m_template As String 'FOR WHICH TEMPLATE THIS ROW IS SUPPOSED TO BE FOR
 ' Property: m_template
 '   Name of the template
-Private m_template As String 'FOR WHICH TEMPLATE THIS ROW IS SUPPOSED TO BE FOR
 
+
+Private m_rowNumber As Integer 'WHICH ROW IT IS SUPPOSED TO FILL
 ' Property: m_rowNumber
 '   Row number of worksheet to be filled
-Private m_rowNumber As Integer 'WHICH ROW IT IS SUPPOSED TO FILL
 
 ' Property: m_rowName
 '   Name of row of worksheet to be filled
