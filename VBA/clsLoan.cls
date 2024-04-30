@@ -219,7 +219,7 @@ Public Sub calcCF(curveDic As Dictionary, discCurveName As String, scenName As S
 '   discCurveName: name of discount curve
 '   scenName: name of the applicable rate curve scenario
 '
-' Methods used::
+' See Also:
 '   [mdl_CurveUtilities.getCurveName][VBA/mdl_CurveUtilities.getCurveName], 
 '   [mdl_Utilities.dtGenerator][VBA/], 
 '   [clsRateCurve.getDF][VBA/], 
