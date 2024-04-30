@@ -1,3 +1,7 @@
+' This is the class docstring
+'
+'
+
 VERSION 1.0 CLASS
 BEGIN
   MultiUse = -1  'True
@@ -58,6 +62,7 @@ Private ColDictionary As Object 'DICTIONARY with all the values to be stored, wh
 
 ' Properties
 Public Property Get template() As String
+' This is a property
     template = m_template
 End Property
 

@@ -11,6 +11,8 @@
 ::: PopulateTemplates/CreateTemplates.bas
     handler: vba
 
+# Header Level 1 again
+
 ## `TemplateRow Object` header level 2
 
 ::: PopulateTemplates/TemplateRow.cls
