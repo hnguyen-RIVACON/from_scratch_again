@@ -219,7 +219,8 @@ Public Sub calcCF(curveDic As Dictionary, discCurveName As String, scenName As S
 '   discCurveName: name of discount curve
 '   scenName: name of the applicable rate curve scenario
 '
-' output / transformed variables:
+' output / transformed variables::
+'
 '   dtLoanDates(): load dates
 '   dblNominals(): Outstanding notionals a end of period, i.e. after amortization, is no amortization:
 '   dblCoupons(): interest coupon rates: fix rate if instrument typ fix; else: last fixing a index 0 and forward rates (plus margin) for index i to n-1
