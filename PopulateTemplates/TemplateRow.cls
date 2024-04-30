@@ -39,6 +39,7 @@ Option Explicit
 
 
 Private m_template As String 'FOR WHICH TEMPLATE THIS ROW IS SUPPOSED TO BE FOR
+' Can you this this text?
 ' Property: m_template
 '   Name of the template
 
@@ -62,7 +63,7 @@ Private ColDictionary As Object 'DICTIONARY with all the values to be stored, wh
 
 ' Properties
 Public Property Get template() As String
-' This is a property
+' This is a property docstring
     template = m_template
 End Property
 
@@ -104,6 +105,8 @@ End Property
 
 ' methods
 Public Sub DisplayDictionaryKeys()
+' This is the docstring for this classs sub
+'
     If Not ColDictionary Is Nothing Then
         Dim key As Variant
         For Each key In ColDictionary.Keys
