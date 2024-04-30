@@ -219,12 +219,6 @@ Public Sub calcCF(curveDic As Dictionary, discCurveName As String, scenName As S
 '   discCurveName: name of discount curve
 '   scenName: name of the applicable rate curve scenario
 '
-' See Also:
-'   ['mdl_CurveUtilities.getCurveName'][VBA/mdl_CurveUtilities.getCurveName], 
-'   [mdl_Utilities.dtGenerator][VBA/], 
-'   ['clsRateCurve.getDF'][VBA/], 
-'   [clsRateCurve.calcFwdRate][VBA/]
-'
 ' output / transformed variables::
 '   dtLoanDates(): load dates
 '   dblNominals(): Outstanding notionals a end of period, i.e. after amortization, is no amortization:
@@ -233,6 +227,13 @@ Public Sub calcCF(curveDic As Dictionary, discCurveName As String, scenName As S
 '   dblACFs(): amorization payments in period from i-1 to i, last entry contains payment of remaining notional
 '   dblCFs(): sum of dblACFs() and dblIRCFs()
 '   dblNCFs(): discounted values of dblCFs()
+'
+' See Also:
+'   ['mdl_CurveUtilities.getCurveName'][VBA/mdl_CurveUtilities.getCurveName], 
+'   [mdl_Utilities.dtGenerator][VBA/], 
+'   ['clsRateCurve.getDF'][VBA/], 
+'   [clsRateCurve.calcFwdRate][VBA/]
+'
 
     Dim yf1 As Double, yf2 As Double, i As Integer, j As Integer
     Dim coupon As Double
