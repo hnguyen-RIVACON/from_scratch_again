@@ -6,7 +6,6 @@
     handler: vba
 
 
-
 ## `CreateTemplates` header level 2
 
 ::: PopulateTemplates/CreateTemplates.bas
