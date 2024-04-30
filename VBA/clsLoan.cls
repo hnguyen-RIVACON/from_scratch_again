@@ -229,10 +229,10 @@ Public Sub calcCF(curveDic As Dictionary, discCurveName As String, scenName As S
 '   dblNCFs(): discounted values of dblCFs()
 '
 ' See Also:
-'   ['mdl_CurveUtilities.getCurveName'][VBA/mdl_CurveUtilities.getCurveName], 
-'   [mdl_Utilities.dtGenerator][VBA/], 
-'   ['clsRateCurve.getDF'][VBA/], 
-'   [clsRateCurve.calcFwdRate][VBA/]
+'   ['mdl_CurveUtilities.getCurveName'][/VBA/mdl_CurveUtilities.getCurveName], 
+'   [mdl_Utilities.dtGenerator][/VBA/mdl_Utilities.dtGenerator], 
+'   ['clsRateCurve.getDF'][/VBA/clsRateCurve.getDF], 
+'   [clsRateCurve.calcFwdRate][/VBA/clsRateCurve.calcFwdRate]
 '
 
     Dim yf1 As Double, yf2 As Double, i As Integer, j As Integer
