@@ -210,7 +210,6 @@ Dim curve As New clsRateCurve, index As Integer
 End Function
 
 Function getCurveName(curveFreq As Integer, scen As String) As String
-' content:
 ' returns curve name based on frequency and scenario name
 '
 ' Arguments: 
